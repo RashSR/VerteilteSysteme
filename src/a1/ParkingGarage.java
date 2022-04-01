@@ -1,3 +1,5 @@
+package a1;
+
 public class ParkingGarage {
 
     private int carAmount;

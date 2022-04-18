@@ -1,4 +1,4 @@
-package a2;
+package ue1.a2;
 
 public class Car {
     private String licensePlate;

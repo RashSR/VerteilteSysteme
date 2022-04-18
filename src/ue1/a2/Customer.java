@@ -1,15 +1,13 @@
-package a1;
+package ue1.a2;
 
 import java.util.Random;
 
-public class Car implements Runnable{
+public class Customer implements Runnable{
 
     private ParkingGarage parkingGarage;
-    private String carName;
 
-    public Car(String carName, ParkingGarage parkingGarage){
+    public Customer(ParkingGarage parkingGarage){
         this.parkingGarage = parkingGarage;
-        this.carName = carName;
     }
 
     @Override
@@ -18,17 +16,10 @@ public class Car implements Runnable{
             Random random = new Random();
             try {
                 Thread.sleep(random.nextInt(10000));
-                parkingGarage.driveIn(this);
-                Thread.sleep(random.nextInt(10000));
-                parkingGarage.driveOut(this);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-
+            parkingGarage.buyCar();
         }
-    }
-
-    public String getCarName(){
-        return this.carName;
     }
 }

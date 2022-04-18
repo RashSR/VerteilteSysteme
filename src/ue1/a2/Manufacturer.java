@@ -1,4 +1,4 @@
-package a2;
+package ue1.a2;
 
 import java.util.Random;
 

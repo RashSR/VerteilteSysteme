@@ -1,4 +1,4 @@
-package a1;
+package ue1.a1;
 
 public class Simulation {
     public static void main(String[] args) throws InterruptedException {

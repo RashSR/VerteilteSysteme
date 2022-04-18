@@ -1,4 +1,4 @@
-package a1;
+package ue1.a1;
 
 public class ParkingGarage {
 

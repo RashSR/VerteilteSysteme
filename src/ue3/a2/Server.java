@@ -16,7 +16,6 @@ public class Server {
                 Socket s = serverSocket.accept();
                 System.out.println("Neue Verbindung von Browser");
                 es.execute(new SocketHandler(s));
-                //new Thread(new SocketHandler(s)).start();
             }
         }catch(IOException e){
             e.printStackTrace();

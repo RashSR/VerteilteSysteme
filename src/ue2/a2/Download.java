@@ -1,4 +1,4 @@
-package ue2.a1.ue2.a2;
+package ue2.a2;
 
 import javax.swing.JProgressBar;
 import java.util.Random;

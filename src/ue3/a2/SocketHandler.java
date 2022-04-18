@@ -4,6 +4,9 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.io.PrintWriter;
 import java.net.Socket;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.List;
 
 public class SocketHandler implements Runnable{
 
@@ -23,16 +26,14 @@ public class SocketHandler implements Runnable{
         }
 
         PrintWriter writer = new PrintWriter(out);
-        writer.println("HTTP/1.1 200 OK");
-        writer.println("Content-Type: text/html");
-        writer.println("Content-Length: 74");
-        writer.println();
-        writer.println("<html>");
-        writer.println("<body>");
-        writer.println("<h1>Hallo Welt!!!</h1>");
-        writer.println("Es hat geklappt");
-        writer.println("</body>");
-        writer.println("</html>");
+        try {
+            List<String> lines = Files.readAllLines(Paths.get("./Resources/index.html"));
+            for(String line : lines){
+                writer.println(line);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
         writer.flush();
     }

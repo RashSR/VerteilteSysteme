@@ -1,4 +1,4 @@
-package ue2.a1.ue2.a2;
+package ue2.a2;
 
 import javax.swing.*;
 import java.util.concurrent.CountDownLatch;

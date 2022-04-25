@@ -6,7 +6,7 @@ import java.net.Socket;
 public class Client {
     public static void main(String[] args) {
         try {
-            Socket server = new Socket("im-lamport", 1212);
+            Socket server = new Socket("localhost", 1001);
 
             Runnable keyboardListener = new KeyInputListener(server);
             new Thread(keyboardListener).start();

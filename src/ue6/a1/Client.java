@@ -15,7 +15,7 @@ public class Client {
         XRayPicture xRayPicture = new XRayPicture("Achim Roskopf");
         XRayPictureIF xrayStub = (XRayPictureIF) UnicastRemoteObject.exportObject(xRayPicture, 0);
 
-        Report report = serverStub.analyze(xRayPicture);
+        Report report = serverStub.analyze(xrayStub);
 
         System.out.println("Diagnose: " + report.getDiagnose() + ", " + report.getDate());
         System.out.println("further Procedure: " + report.getProceedFurther());

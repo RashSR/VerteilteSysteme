@@ -9,6 +9,8 @@ public class Report implements Serializable {
     private String diagnose;
     private String proceedFurther;
 
+    public Report(){}
+
     public Report(XRayPicture picture){
         diagnose = "Bad stuff";
         proceedFurther =  "The patient has to take medication.";

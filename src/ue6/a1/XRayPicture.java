@@ -3,7 +3,7 @@ package ue6.a1;
 import java.io.Serializable;
 import java.util.Date;
 
-public class XRayPicture implements Serializable {
+public class XRayPicture implements XRayPictureIF {
 
     private Date pictureFrom;
     private transient String patientName;

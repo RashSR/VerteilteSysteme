@@ -13,6 +13,6 @@ public class Server {
         EarlyDetectionIF stub = (EarlyDetectionIF) UnicastRemoteObject.exportObject(earlyDetection, 0);
         Registry registry = LocateRegistry.createRegistry(1099);
 
-        registry.bind("Key", stub);
+        registry.bind("Key-ue1", stub);
     }
 }

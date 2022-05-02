@@ -9,4 +9,5 @@ public class EarlyDetectionImpl implements EarlyDetectionIF {
         Report report = new Report(picture);
         return report;
     }
+
 }

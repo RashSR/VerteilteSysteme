@@ -3,11 +3,15 @@ package ue6.a2;
 import java.io.Serializable;
 import java.util.Date;
 
-public class Report implements Serializable {
+public class Report implements ReportIF {
 
     private Date date;
     private String diagnose;
     private String proceedFurther;
+
+    public Report(){
+        
+    }
 
     public Report(XRayPicture picture){
         diagnose = "Bad stuff";
@@ -15,9 +19,7 @@ public class Report implements Serializable {
         date = picture.getPictureFrom();
     }
 
-    public Date getDate() {
-        return date;
-    }
+    public Date getDate() { return date; }
 
     public void setDate(Date date) {
         this.date = date;

@@ -10,8 +10,10 @@ public class Client {
 
         Registry registry = LocateRegistry.getRegistry("localhost", 1099);
         EarlyDetectionIF earlyDetection = (EarlyDetectionIF) registry.lookup("Key");
+
         XRayPicture xRayPicture = new XRayPicture("Achim Roskopf");
-        Report report = earlyDetection.analyze(xRayPicture);
+
+        ReportIF report = earlyDetection.analyze(xRayPicture);
 
         System.out.println("Diagnose: " + report.getDiagnose() + ", " + report.getDate());
         System.out.println("further Procedure: " + report.getProceedFurther());

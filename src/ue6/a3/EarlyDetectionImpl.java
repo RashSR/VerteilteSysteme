@@ -5,8 +5,9 @@ import java.rmi.RemoteException;
 public class EarlyDetectionImpl implements EarlyDetectionIF {
 
     @Override
-    public Report analyze(XRayPicture picture) throws RemoteException {
+    public void analyze(XRayPicture picture, CallbackIF reference) throws RemoteException, InterruptedException {
         Report report = new Report(picture);
-        return report;
+        Thread t = new Thread(new AnalyzeAsync(report, reference));
+        t.start();
     }
 }

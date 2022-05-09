@@ -4,5 +4,5 @@ import java.rmi.Remote;
 import java.rmi.RemoteException;
 
 public interface EarlyDetectionIF extends Remote {
-    public Report analyze(XRayPicture picture) throws RemoteException;
+    public void analyze(XRayPicture picture, CallbackIF reference) throws RemoteException, InterruptedException;
 }
